@@ -154,13 +154,13 @@ def fixXml(classes):
                     cls = obj.find('name').text
                     if cls not in classes:
                         root.remove(obj)
-            tree.write('predata/' + 'finalXml/' + classes  + '/' + xml, encoding="utf-8")
+            tree.write('predata/' + 'finalXml/' + clsA  + '/' + xml, encoding="utf-8")
 
     print('去除xml中无用classes完成')
 
 def toEnglish(clsaaes):
-    for xml in os.listdir('predata/' + 'xml/' + clsaaes + '/'):
-        in_file = open('predata/' + 'xml/' + clsaaes + '/' + xml, encoding="utf-8")
+    for xml in os.listdir('predata/' + 'finalXml/' + clsaaes + '/'):
+        in_file = open('predata/' + 'finalXml/' + clsaaes + '/' + xml, encoding="utf-8")
         tree = ET.parse(in_file)
         root = tree.getroot()
         name = root.find('filename')
@@ -180,6 +180,7 @@ def toEnglish(clsaaes):
 if __name__ == '__main__':
     img_dir = '410newimg'
     xml_dir = '410newxml'
+    '''
     auto = input('是否使用自动筛选class功能？(y/n):')
     if auto == 'y':
         number = input('筛选class的最少data数量是？(输入数字)')
@@ -204,6 +205,11 @@ if __name__ == '__main__':
     #############################################
     #r cls in classes:
         #去除多余的class
+    '''
+    dic = {}
+    classes = ('鸡蛋壳','葱','橘子皮','垃圾桶','香蕉皮')
+    for i in range(len(classes)):
+        dic[classes[i]] = ''
     fixXml(classes)
     ###########################################
     toE = input('是否转换成英文class(y/n):')
