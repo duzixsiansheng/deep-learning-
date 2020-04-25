@@ -11,6 +11,7 @@ augment：
 
 生成csv：
     使用get_train_val_test.py可以随机生成train/test等分类，自动每个class单独生成。
+    
     使用voc2csv.py把txt转换成csv
 
 
@@ -20,7 +21,9 @@ train：
 
 数据分析：
     使用mankData.ipynb可以生成detect和label的对比图片。
+    
     readTXT.py可以筛选出test的图片和xml
+    
     detect.ipynb可以生成用于mAP的txt文件
     
     
