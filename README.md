@@ -29,9 +29,16 @@ train：
     
     readTXT.py可以筛选出test的图片和xml
     
-    detect.ipynb可以生成用于mAP的txt文件
     
     
+ mAP：
+    需要3中input： 原始的img，ground_truth, detect_result
+    detect.ipynb可以生成detect_result的txt
+    ground_truth.py可以生成ground truth的txt
+    rename.py可以把3种input改名，方便浏览（如果文件名不包括'.'那么必须改名，否则会出错）
+    准备完毕后运行main.py就可以测试了
+    
+ 
     
   
    
